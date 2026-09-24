@@ -1,0 +1,29 @@
+# A1 core list, forced into A1 (with the closed sets in packbuilder/langs/es.py).
+# Read by packbuilder's Spanish spec: [GROUP] header (UD-style group), then
+# whitespace-separated lemmas. Order matters for reproducibility; append new
+# words at the end of their group.
+
+[NOUN]
+casa puerta ventana pan leche huevo agua vino café té cerveza queso manzana carne pescado
+fruta verdura arroz azúcar sal nariz ojo boca mano cabeza pie brazo pierna oreja pelo cara
+diente silla mesa cama cocina baño habitación libro bolígrafo escuela trabajo oficina tienda
+ciudad calle tren coche autobús avión bicicleta estación hotel restaurante mercado día noche
+mañana tarde semana mes año hora minuto familia madre padre hermano hermana hijo hija marido
+esposa amigo niño chico chica hombre mujer nombre teléfono perro gato tiempo sol lluvia mar
+montaña llave billete desayuno comida cena médico clase ropa zapato camisa chaqueta falda
+sombrero reloj vaso botella cuchara tenedor cuchillo taza playa país dinero idioma lápiz
+tío tía primo abuelo abuela calor nieve pollo
+computadora ordenador esposo
+
+[VERB]
+ser estar tener haber hacer ir venir decir ver saber poder querer deber comer beber dormir
+hablar entender leer escribir trabajar vivir comprar abrir cerrar tomar dar esperar llamar
+buscar encontrar gustar amar conocer mirar escuchar llegar salir volver entrar pagar estudiar
+necesitar llevar
+
+[ADJ]
+bueno malo grande pequeño nuevo viejo caliente frío alto bajo largo corto feliz cansado
+contento joven fácil difícil bonito
+
+[ADV]
+hoy mañana ayer aquí allí siempre nunca mucho poco bien mal también todavía ya ahora tarde muy
