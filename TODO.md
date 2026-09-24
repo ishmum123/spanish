@@ -68,3 +68,15 @@ Residuals after QA round 1 and its fix round. Rules and counts are in
 - The link and filter flags added for Spanish (phrase_token_spans,
   homograph_by_translation, initial_noun_verb_homograph, sensitive_re,
   translation_mismatch) are off for Italian. Each could be tried there.
+
+## Reading passages
+- A native-speaker pass over the 60 texts has not been done yet; only an
+  automated QA pass plus one round of manual/external QA fixes.
+- Known builder quirk: the adjective solo (w0110) is added to the
+  sentence's `words` without a span in p0017 s4, p0045 s1 and p0051 s0.
+  This comes from the classify lemma fallback and was not changed.
+- The passage linker rules for Spanish (phrase-part links, surface-reading
+  fallback, truecase after «¡¿ and !?, passage-only fue/fuera resolution)
+  live in vocab-engine's `packbuilder/langs/es.py` hooks, not in this repo.
+- Full manual QA notes and per-passage coverage/link numbers are in
+  `tools/REPORT_passages.md`.

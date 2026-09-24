@@ -143,7 +143,7 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 994, 'verb': 450, 'adj'
   71 la cosa [noun] thing
   72 también [adv] also, too, as well
   73 sobre [prep] about; on, above, over
-  74 el tiempo [noun] time
+  74 el tiempo [noun] time; weather
   75 alguno [det] some, any
   76 pensar [verb] to think, to ponder
   77 dónde [adv] where?
