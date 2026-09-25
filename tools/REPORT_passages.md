@@ -6,73 +6,85 @@ punctuation not counted). Level budget (passage + questions + options): A1 may u
 <=3 A2 lemmas and no B1; A2 may use <=3 B1 lemmas; B1 may use anything in the pack.
 Linked = tokens whose word id is also in the sentence's `words` (the stricter share:
 a pack lemma can go unlinked when the tagger reads it with another POS).
+words = the builder's word count (the band rule); ws_words = whitespace-separated
+tokens of the passage text, the count the app shows (report only).
 
-- **A1**: 20 passages; words/passage 67-90 (median 85.0); coverage min 1.000, median 1.000 (rule >= 0.95); linked min 1.000; questions mc 52, tf 43
-- **A2**: 20 passages; words/passage 99-120 (median 113.0); coverage min 0.982, median 1.000 (rule >= 0.95); linked min 0.982; questions mc 59, tf 41
-- **B1**: 20 passages; words/passage 119-147 (median 132.5); coverage min 0.953, median 0.985 (rule >= 0.93); linked min 0.953; questions mc 60, tf 40
+- **A1**: 20 passages; words/passage 67-90 (median 85.0); ws_words 67-90; coverage min 1.000, median 1.000 (rule >= 0.95); linked min 1.000; questions mc 52, tf 43
+- **A2**: 20 passages; words/passage 99-120 (median 113.0); ws_words 99-120; coverage min 0.982, median 1.000 (rule >= 0.95); linked min 0.982; questions mc 59, tf 41
+- **B1**: 20 passages; words/passage 119-147 (median 132.5); ws_words 121-147; coverage min 0.953, median 0.985 (rule >= 0.93); linked min 0.953; questions mc 60, tf 40
 
-| id | lv | title | words | coverage | linked | out-of-pack lemmas (reason) | higher-level lemmas |
-|---|---|---|---|---|---|---|---|
-| p0001 | A1 | Mi día | 81 | 1.000 | 1.000 | - | - |
-| p0002 | A1 | La familia de Lucía | 85 | 1.000 | 1.000 | - | - |
-| p0003 | A1 | En el mercado | 76 | 1.000 | 1.000 | - | A2: cuánto |
-| p0004 | A1 | Un mensaje para Marta | 77 | 1.000 | 1.000 | - | A2: proponer |
-| p0005 | A1 | El tiempo en mi país | 81 | 1.000 | 1.000 | - | - |
-| p0006 | A1 | En el tren | 90 | 1.000 | 1.000 | - | A2: viajar, viaje |
-| p0007 | A1 | Mi escuela nueva | 86 | 1.000 | 1.000 | - | A2: cuánto, profesor |
-| p0008 | A1 | En el restaurante | 79 | 1.000 | 1.000 | - | - |
-| p0009 | A1 | Mi perro Toby | 89 | 1.000 | 1.000 | - | A2: color, cuánto |
-| p0010 | A1 | La tienda cierra en agosto | 69 | 1.000 | 1.000 | - | - |
-| p0011 | A1 | La casa de los abuelos | 83 | 1.000 | 1.000 | - | A2: abajo, arriba |
-| p0012 | A1 | Un domingo en la playa | 85 | 1.000 | 1.000 | - | - |
-| p0013 | A1 | Mi primer día de trabajo | 89 | 1.000 | 1.000 | - | A2: contestar |
-| p0014 | A1 | ¿Dónde está la estación? | 67 | 1.000 | 1.000 | - | A2: cuánto, iglesia, izquierda |
-| p0015 | A1 | El gato de la ventana | 86 | 1.000 | 1.000 | - | A2: abierto, color, dueño |
-| p0016 | A1 | Nieve en la montaña | 89 | 1.000 | 1.000 | - | A2: caminar |
-| p0017 | A1 | Una llamada a mamá | 74 | 1.000 | 1.000 | - | - |
-| p0018 | A1 | El sábado de Elena | 89 | 1.000 | 1.000 | - | A2: música |
-| p0019 | A1 | Aprendo español | 89 | 1.000 | 1.000 | - | A2: visitar |
-| p0020 | A1 | Ropa para el invierno | 87 | 1.000 | 1.000 | - | - |
-| p0021 | A2 | Vacaciones en la costa | 119 | 1.000 | 1.000 | - | B1: amable |
-| p0022 | A2 | El nuevo trabajo de Hugo | 112 | 1.000 | 1.000 | - | - |
-| p0023 | A2 | En el médico | 99 | 1.000 | 1.000 | - | - |
-| p0024 | A2 | Un piso en el centro | 111 | 1.000 | 1.000 | - | B1: amable |
-| p0025 | A2 | Cómo preparar un buen café | 104 | 1.000 | 1.000 | - | B1: enseguida, sano |
-| p0026 | A2 | Un día terrible | 117 | 0.991 | 0.991 | mojado x1 (natural wording (wet clothes)) | B1: tormenta |
-| p0027 | A2 | Un parque nuevo en el barrio | 117 | 1.000 | 1.000 | - | B1: deporte, fábrica, lago |
-| p0028 | A2 | Una fiesta sorpresa | 111 | 1.000 | 1.000 | - | B1: excusa, salón |
-| p0029 | A2 | El plan para mañana | 108 | 1.000 | 1.000 | - | B1: saludo |
-| p0030 | A2 | ¿Qué película vemos? | 103 | 1.000 | 1.000 | - | - |
-| p0031 | A2 | El partido del domingo | 120 | 0.982 | 0.982 | camiseta x1 (football word (team shirt)), gol x1 (football term (goal), unavoidable in a match report) | B1: entrenador, nervioso |
-| p0032 | A2 | Mi primer año en la universidad | 114 | 1.000 | 1.000 | - | B1: examen |
-| p0033 | A2 | Aviso en la estación | 103 | 1.000 | 1.000 | - | B1: espera, fumar |
-| p0034 | A2 | La compra del sábado | 120 | 1.000 | 1.000 | - | B1: compra, fresco, supermercado |
-| p0035 | A2 | Mi barrio | 120 | 1.000 | 1.000 | - | B1: moderno, saludar |
-| p0036 | A2 | Un accidente con la bicicleta | 116 | 1.000 | 1.000 | - | B1: enseguida, roto |
-| p0037 | A2 | Curso de español en verano | 117 | 1.000 | 1.000 | - | B1: cocinar, examen, máximo |
-| p0038 | A2 | Una carta desde Berlín | 111 | 1.000 | 1.000 | - | - |
-| p0039 | A2 | La fiesta del pueblo | 115 | 1.000 | 1.000 | - | B1: llenar |
-| p0040 | A2 | Un problema con el teléfono | 100 | 1.000 | 1.000 | - | B1: amable, recomendar |
-| p0041 | B1 | Una decisión difícil | 139 | 1.000 | 1.000 | - | - |
-| p0042 | B1 | Una carta al hotel | 119 | 0.957 | 0.957 | acondicionado x1 (fixed phrase aire acondicionado (air conditioning)), ascensor x1 (hotel word (lift), part of the complaint), atentamente x1 (letter closing (yours faithfully)), estancia x1 (letter wording (stay), standard in a complaint), recepción x1 (hotel word (reception desk)) | - |
-| p0043 | B1 | Cierra la vieja fábrica | 128 | 0.984 | 0.984 | fabricar x1 (news word (to manufacture), topic of the article), manifestación x1 (news word (demonstration), topic of the article) | - |
-| p0044 | B1 | Cuando mi abuelo era niño | 147 | 1.000 | 1.000 | - | - |
-| p0045 | B1 | Cómo dormir mejor | 132 | 1.000 | 1.000 | - | - |
-| p0046 | B1 | Un sábado en la biblioteca | 144 | 0.986 | 0.986 | jubilado x1 (everyday word (retired), key to the character), paciencia x1 (natural wording (patience)) | - |
-| p0047 | B1 | Menos coches en el centro | 137 | 0.978 | 0.978 | ayuntamiento x1 (news word (town council)), carril x1 (traffic word (lane), unavoidable in the article), terraza x1 (café terrace, unavoidable in the article) | - |
-| p0048 | B1 | Mi primer viaje sola | 125 | 1.000 | 1.000 | - | - |
-| p0049 | B1 | Los jóvenes y el móvil | 137 | 1.000 | 1.000 | - | - |
-| p0050 | B1 | El ruido de los vecinos | 133 | 0.984 | 0.984 | alfombra x1 (household word (rug)), grueso x1 (natural wording (thick walls)) | - |
-| p0051 | B1 | Un jardín entre edificios | 133 | 0.992 | 0.992 | ayuntamiento x1 (news word (town council)) | - |
-| p0052 | B1 | El concurso de cocina | 138 | 0.962 | 0.962 | cocinero x1 (cooking word (chef)), euro x1 (currency (euro)), huerto x1 (garden word (vegetable plot)), lágrima x1 (natural wording (tears)), receta x1 (cooking word (recipe)) | - |
-| p0053 | B1 | La boda de mi prima | 128 | 0.992 | 0.992 | ceremonia x1 (wedding word (ceremony)) | - |
-| p0054 | B1 | El museo abre de noche | 136 | 0.953 | 0.953 | antelación x1 (fixed phrase con antelación (in advance)), euro x1 (currency (euro)), gratuito x1 (notice word (free of charge)), guiado x1 (fixed phrase visita guiada (guided tour)), permanente x1 (museum word (permanent collection)), visitante x1 (museum word (visitors)) | - |
-| p0055 | B1 | Trabajar desde casa | 136 | 1.000 | 1.000 | - | - |
-| p0056 | B1 | Me robaron la bicicleta | 130 | 0.968 | 0.968 | candado x2 (bike word (lock), unavoidable in the story), comisaría x1 (police station, unavoidable in the story), internet x1 (everyday word (internet)) | - |
-| p0057 | B1 | Una carta al periódico | 124 | 1.000 | 1.000 | - | - |
-| p0058 | B1 | Aprender un idioma de adulto | 125 | 0.976 | 0.976 | gramática x1 (language-learning word (grammar)), pronunciación x1 (language-learning word (pronunciation)), soltura x1 (fixed phrase con soltura (fluently)) | - |
-| p0059 | B1 | Dentro de diez años | 122 | 0.983 | 0.983 | arquitectura x1 (field of study (architecture)), diseñar x1 (natural wording (to design)) | - |
-| p0060 | B1 | Una semana sin coche | 131 | 0.976 | 0.976 | euro x1 (currency (euro)), gasolina x1 (everyday word (petrol)), reto x1 (natural wording (challenge)) | - |
+| id | lv | title | words | ws_words | coverage | linked | out-of-pack lemmas (reason) | higher-level lemmas |
+|---|---|---|---|---|---|---|---|---|
+| p0001 | A1 | Mi día | 81 | 81 | 1.000 | 1.000 | - | - |
+| p0002 | A1 | La familia de Lucía | 85 | 85 | 1.000 | 1.000 | - | - |
+| p0003 | A1 | En el mercado | 76 | 76 | 1.000 | 1.000 | - | A2: cuánto |
+| p0004 | A1 | Un mensaje para Marta | 77 | 77 | 1.000 | 1.000 | - | A2: proponer |
+| p0005 | A1 | El tiempo en mi país | 81 | 81 | 1.000 | 1.000 | - | - |
+| p0006 | A1 | En el tren | 90 | 90 | 1.000 | 1.000 | - | A2: viajar, viaje |
+| p0007 | A1 | Mi escuela nueva | 86 | 86 | 1.000 | 1.000 | - | A2: cuánto, profesor |
+| p0008 | A1 | En el restaurante | 79 | 79 | 1.000 | 1.000 | - | - |
+| p0009 | A1 | Mi perro Toby | 89 | 89 | 1.000 | 1.000 | - | A2: color, cuánto |
+| p0010 | A1 | La tienda cierra en agosto | 69 | 69 | 1.000 | 1.000 | - | - |
+| p0011 | A1 | La casa de los abuelos | 83 | 83 | 1.000 | 1.000 | - | A2: abajo, arriba |
+| p0012 | A1 | Un domingo en la playa | 85 | 85 | 1.000 | 1.000 | - | - |
+| p0013 | A1 | Mi primer día de trabajo | 89 | 89 | 1.000 | 1.000 | - | A2: contestar |
+| p0014 | A1 | ¿Dónde está la estación? | 67 | 67 | 1.000 | 1.000 | - | A2: cuánto, iglesia, izquierda |
+| p0015 | A1 | El gato de la ventana | 86 | 86 | 1.000 | 1.000 | - | A2: abierto, color, dueño |
+| p0016 | A1 | Nieve en la montaña | 89 | 89 | 1.000 | 1.000 | - | A2: caminar |
+| p0017 | A1 | Una llamada a mamá | 74 | 74 | 1.000 | 1.000 | - | - |
+| p0018 | A1 | El sábado de Elena | 89 | 89 | 1.000 | 1.000 | - | A2: música |
+| p0019 | A1 | Aprendo español | 89 | 89 | 1.000 | 1.000 | - | A2: visitar |
+| p0020 | A1 | Ropa para el invierno | 87 | 87 | 1.000 | 1.000 | - | - |
+| p0021 | A2 | Vacaciones en la costa | 119 | 119 | 1.000 | 1.000 | - | B1: amable |
+| p0022 | A2 | El nuevo trabajo de Hugo | 112 | 112 | 1.000 | 1.000 | - | - |
+| p0023 | A2 | En el médico | 99 | 99 | 1.000 | 1.000 | - | - |
+| p0024 | A2 | Un piso en el centro | 111 | 111 | 1.000 | 1.000 | - | B1: amable |
+| p0025 | A2 | Cómo preparar un buen café | 104 | 104 | 1.000 | 1.000 | - | B1: enseguida, sano |
+| p0026 | A2 | Un día terrible | 117 | 117 | 0.991 | 0.991 | mojado x1 (natural wording (wet clothes)) | B1: tormenta |
+| p0027 | A2 | Un parque nuevo en el barrio | 117 | 117 | 1.000 | 1.000 | - | B1: deporte, fábrica, lago |
+| p0028 | A2 | Una fiesta sorpresa | 111 | 111 | 1.000 | 1.000 | - | B1: excusa, salón |
+| p0029 | A2 | El plan para mañana | 108 | 108 | 1.000 | 1.000 | - | B1: saludo |
+| p0030 | A2 | ¿Qué película vemos? | 103 | 103 | 1.000 | 1.000 | - | - |
+| p0031 | A2 | El partido del domingo | 120 | 120 | 0.982 | 0.982 | camiseta x1 (football word (team shirt)), gol x1 (football term (goal), unavoidable in a match report) | B1: entrenador, nervioso |
+| p0032 | A2 | Mi primer año en la universidad | 114 | 114 | 1.000 | 1.000 | - | B1: examen |
+| p0033 | A2 | Aviso en la estación | 103 | 103 | 1.000 | 1.000 | - | B1: espera, fumar |
+| p0034 | A2 | La compra del sábado | 120 | 120 | 1.000 | 1.000 | - | B1: compra, fresco, supermercado |
+| p0035 | A2 | Mi barrio | 120 | 120 | 1.000 | 1.000 | - | B1: moderno, saludar |
+| p0036 | A2 | Un accidente con la bicicleta | 116 | 116 | 1.000 | 1.000 | - | B1: enseguida, roto |
+| p0037 | A2 | Curso de español en verano | 117 | 117 | 1.000 | 1.000 | - | B1: cocinar, examen, máximo |
+| p0038 | A2 | Una carta desde Berlín | 111 | 111 | 1.000 | 1.000 | - | - |
+| p0039 | A2 | La fiesta del pueblo | 115 | 115 | 1.000 | 1.000 | - | B1: llenar |
+| p0040 | A2 | Un problema con el teléfono | 100 | 100 | 1.000 | 1.000 | - | B1: amable, recomendar |
+| p0041 | B1 | Una decisión difícil | 139 | 139 | 1.000 | 1.000 | - | - |
+| p0042 | B1 | Una carta al hotel | 119 | 121 | 0.957 | 0.957 | acondicionado x1 (fixed phrase aire acondicionado (air conditioning)), ascensor x1 (hotel word (lift), part of the complaint), atentamente x1 (letter closing (yours faithfully)), estancia x1 (letter wording (stay), standard in a complaint), recepción x1 (hotel word (reception desk)) | - |
+| p0043 | B1 | Cierra la vieja fábrica | 128 | 129 | 0.984 | 0.984 | fabricar x1 (news word (to manufacture), topic of the article), manifestación x1 (news word (demonstration), topic of the article) | - |
+| p0044 | B1 | Cuando mi abuelo era niño | 147 | 147 | 1.000 | 1.000 | - | - |
+| p0045 | B1 | Cómo dormir mejor | 132 | 132 | 1.000 | 1.000 | - | - |
+| p0046 | B1 | Un sábado en la biblioteca | 144 | 144 | 0.986 | 0.986 | jubilado x1 (everyday word (retired), key to the character), paciencia x1 (natural wording (patience)) | - |
+| p0047 | B1 | Menos coches en el centro | 137 | 137 | 0.978 | 0.978 | ayuntamiento x1 (news word (town council)), carril x1 (traffic word (lane), unavoidable in the article), terraza x1 (café terrace, unavoidable in the article) | - |
+| p0048 | B1 | Mi primer viaje sola | 125 | 125 | 1.000 | 1.000 | - | - |
+| p0049 | B1 | Los jóvenes y el móvil | 137 | 137 | 1.000 | 1.000 | - | - |
+| p0050 | B1 | El ruido de los vecinos | 133 | 133 | 0.984 | 0.984 | alfombra x1 (household word (rug)), grueso x1 (natural wording (thick walls)) | - |
+| p0051 | B1 | Un jardín entre edificios | 133 | 133 | 0.992 | 0.992 | ayuntamiento x1 (news word (town council)) | - |
+| p0052 | B1 | El concurso de cocina | 138 | 138 | 0.962 | 0.962 | cocinero x1 (cooking word (chef)), euro x1 (currency (euro)), huerto x1 (garden word (vegetable plot)), lágrima x1 (natural wording (tears)), receta x1 (cooking word (recipe)) | - |
+| p0053 | B1 | La boda de mi prima | 128 | 128 | 0.992 | 0.992 | ceremonia x1 (wedding word (ceremony)) | - |
+| p0054 | B1 | El museo abre de noche | 136 | 136 | 0.953 | 0.953 | antelación x1 (fixed phrase con antelación (in advance)), euro x1 (currency (euro)), gratuito x1 (notice word (free of charge)), guiado x1 (fixed phrase visita guiada (guided tour)), permanente x1 (museum word (permanent collection)), visitante x1 (museum word (visitors)) | - |
+| p0055 | B1 | Trabajar desde casa | 136 | 136 | 1.000 | 1.000 | - | - |
+| p0056 | B1 | Me robaron la bicicleta | 130 | 130 | 0.968 | 0.968 | candado x2 (bike word (lock), unavoidable in the story), comisaría x1 (police station, unavoidable in the story), internet x1 (everyday word (internet)) | - |
+| p0057 | B1 | Una carta al periódico | 124 | 124 | 1.000 | 1.000 | - | - |
+| p0058 | B1 | Aprender un idioma de adulto | 125 | 125 | 0.976 | 0.976 | gramática x1 (language-learning word (grammar)), pronunciación x1 (language-learning word (pronunciation)), soltura x1 (fixed phrase con soltura (fluently)) | - |
+| p0059 | B1 | Dentro de diez años | 122 | 122 | 0.983 | 0.983 | arquitectura x1 (field of study (architecture)), diseñar x1 (natural wording (to design)) | - |
+| p0060 | B1 | Una semana sin coche | 131 | 131 | 0.976 | 0.976 | euro x1 (currency (euro)), gasolina x1 (everyday word (petrol)), reto x1 (natural wording (challenge)) | - |
+
+Title words, and question/option words the budget does not count (a numeral-like
+pack word), that are out of the pack or above the passage's level (report only;
+the budget rule above is unchanged):
+
+- p0004: title 'mensaje': mensaje A2
+- p0017: title 'llamada': llamada A2
+- p0021: title 'vacaciones': vacación B1
+- p0033: title 'aviso': aviso B1
+- p0034: title 'compra': compra B1
 
 <!-- manual section: kept across runs -->
 ## Manual QA (2026-09-24, author self-QA, revised after external QA)

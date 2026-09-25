@@ -1,7 +1,7 @@
 # Spanish A1-B1 vocab pack
 
 Static data pack for a language-agnostic vocab trainer (`key: "es"`). 2000
-words spanning A1-B1, each with a short English gloss, plus 2949 example
+words spanning A1-B1, each with a short English gloss, plus 3288 example
 sentences with English translations. The Read tab adds 60 short reading
 passages with comprehension questions (see "Reading passages" below).
 

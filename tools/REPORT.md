@@ -55,17 +55,17 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 994, 'verb': 450, 'adj'
 
 ## Sentences
 
-- Final sentences: **3,286**, 2 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
+- Final sentences: **3,288**, 2 with audio (`https://tatoeba.org/audio/download/<audio_id>`).
 - Word coverage: 0 = 2, 1 = 4, 2 = 1994.
 - Words with no sentence: el período, ultimar.
-- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 175,397. Rejected for a content lemma outside pack/top-3000: 65,122.
-- Voseo / regional slang: 4,844 candidates contain one; 4,840 were blocked for A1/A2 words; 65 in the final set (all lv B1).
-- Primary word level of each sentence: {'A1': 817, 'A2': 1179, 'B1': 1290}.
+- Candidate sentences (terminal punctuation, 3-14 tokens, content lemmas in pack/top-3000, >=1 link): 175,282. Rejected for a content lemma outside pack/top-3000: 65,122.
+- Voseo / regional slang: 4,749 candidates contain one; 4,745 were blocked for A1/A2 words; 62 in the final set (all lv B1).
+- Primary word level of each sentence: {'A1': 816, 'A2': 1182, 'B1': 1290}.
 - Token-length distribution of the final set:
 
 | tokens | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| sentences | 19 | 803 | 199 | 1144 | 931 | 123 | 30 | 14 | 17 | 3 | 3 |
+| sentences | 17 | 804 | 196 | 1153 | 927 | 123 | 30 | 15 | 17 | 3 | 3 |
 
 ## Top 100 by rank (lemma [pos] gloss)
 
@@ -173,4 +173,5 @@ Levels: {'A1': 600, 'A2': 700, 'B1': 700}. POS: {'noun': 994, 'verb': 450, 'adj'
 ```
 
 <!-- manual:begin -->
+- 2026-09-25: engine bumped to 059b90b (voice-init fix, no-voice notice timing, word ceiling). 9 words moved A2->B1 under the shared word-level ceiling: matar, arma, sangre, sexo, asesinato, droga, asesinar, sexual, asesino. Band-edge shifts from re-counting: suficiente, prueba A2->A1; lamentar, teatro, pérdida, empleo, enfermo, crédito, vestido, aprovechar, héroe B1->A2. No rank, id or gloss changed.
 <!-- manual:end -->
