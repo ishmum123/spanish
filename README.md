@@ -148,6 +148,8 @@ TTS/STT use es-ES.
 | Translations | Tatoeba `eng_sentences.tsv` + `spa-eng_links.tsv` | CC-BY 2.0 FR | English translations |
 | Audio | Tatoeba `sentences_with_audio` | CC BY / CC BY-SA / CC0 clips only | 3 sentences. Most Spanish Tatoeba audio is CC BY-NC-ND or unlicensed, so the trainer relies on browser TTS. |
 
+Licence: code MIT, pack data CC BY-SA 4.0, see LICENSE.
+
 There is no open CEFR word list for Spanish, so levels are a frequency
 proxy, not an official CEFR classification. doozan/spanish_data was
 considered as a cross-check only and is not shipped.
