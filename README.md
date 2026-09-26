@@ -133,7 +133,12 @@ To build against a vocab-engine checkout, set
    English register (ain't, gonna), and translations whose pronoun gender
    contradicts the Spanish ("Lo vi" = "I saw her") are dropped.
 
-Typing is accent-lenient and case-insensitive at A1/A2, strict at B1.
+Typing is accent-lenient and case-insensitive at A1/A2, strict at B1. A
+fold-only match is rejected when it spells another pack word instead, e.g.
+typed `si`, `mi`, `tu`, `el`, `que`, `te`, `como`, `cuando`, `porque`,
+`donde`, `quien`, `aun`, `cuanto` or `sonar` no longer scores for `sí`, `mí`,
+`tú`, `él`, `qué`, `té`, `cómo`, `cuándo`, `porqué`, `dónde`, `quién`, `aún`,
+`cuánto` or `soñar`, and vice versa.
 TTS/STT use es-ES.
 
 ## Sources and licences
