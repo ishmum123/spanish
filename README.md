@@ -5,10 +5,10 @@ words spanning A1-B1, each with a short English gloss, plus 3288 example
 sentences with English translations. The Read tab adds 60 short reading
 passages with comprehension questions (see "Reading passages" below).
 
-**Live:** https://ishmum123.github.io/spanish/
+**Live:** https://bannerless-studio.github.io/spanish/
 
 This repo holds the Spanish data pack and the Spanish data files its build
-reads, plus [`vocab-engine`](https://github.com/ishmum123/vocab-engine) as a
+reads, plus [`vocab-engine`](https://github.com/Bannerless-Studio/vocab-engine) as a
 git submodule at `engine/`. The engine holds the shared UI, drill logic and
 pack builder (`engine/tools/packbuilder`). The Spanish rules live in
 `engine/tools/packbuilder/langs/es.py`.
